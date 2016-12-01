@@ -2,7 +2,7 @@
 
 **This code only provides the implementation of SRResNet. SRGAN is implemented but the result is not very good.**
 
-Torch implementation of [SRGAN](https://arxiv.org/abs/1609.04802) that generates high-resolution images from low-resolution input images, for example:
+Torch implementation of [Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network](https://arxiv.org/abs/1609.04802) that generates high-resolution images from low-resolution input images, for example:
 
 <img src="docs/comic_mse.png" width="900px"/>
 
