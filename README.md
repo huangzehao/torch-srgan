@@ -14,13 +14,13 @@ Torch implementation of [SRGAN](https://arxiv.org/abs/1609.04802) that generates
 - Python with Numpy, Scipy, PIL, h5py
 - Torch with nn, image, graphicsmagick, trepl, hdf5, cunn, cutorch
 
-### Getting Started
+## Getting Started
 - Clone this repo:
 ```bash
 git clone https://github.com/huangzehao/torch-srgan
 cd torch-srgan
 ```
-
+### Train
 - Download [imagenet valset](http://image-net.org/download-images) for training
 
 - Prepare training data
@@ -41,6 +41,7 @@ CUDA_VISIBLE_DEVICES=0 th train.lua -h5_file $(output_hdf5_file) -num_epoch 50 -
 # SRResNet MSE VGG54 (need VGG19 model)
 CUDA_VISIBLE_DEVICES=0 th train.lua -h5_file $(output_hdf5_file) -num_epoch 50 -loss 'percep' -percep_layer 'conv5_4' -use_tanh
 ```
+### Test
 - Test trained model
 ```bash
 # SRResNet MSE
