@@ -17,7 +17,7 @@ Torch implementation of [SRGAN](https://arxiv.org/abs/1609.04802) that generates
 ### Getting Started
 - Clone this repo:
 ```bash
-git clone git@github.com:huangzehao/torch-srgan.git
+git clone https://github.com/huangzehao/torch-srgan
 cd torch-srgan
 ```
 
