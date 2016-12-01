@@ -49,4 +49,4 @@ CUDA_VISIBLE_DEVICES=0 th test.lua -img ./imgs/comic_input.bmp -output ./output.
 ```
 
 ## Acknowledgments
-Code borrows heavily from [fast-neural-style](https://github.com/jcjohnson/fast-neural-style) and [cifar.torch](https://github.com/szagoruyko/cifar.torch)
+Code borrows heavily from [fast-neural-style](https://github.com/jcjohnson/fast-neural-style) and [cifar.torch](https://github.com/szagoruyko/cifar.torch). Thanks for their excellent work!
