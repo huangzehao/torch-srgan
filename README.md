@@ -34,6 +34,7 @@ bash VGG19.sh
 ```
 - Train the model
 ```bash
+mkdir checkpoint val
 # SRResNet MSE
 CUDA_VISIBLE_DEVICES=0 th train.lua -h5_file $(output_hdf5_file) -num_epoch 50 -loss 'pixel'
 # SRResNet MSE VGG22 (need VGG19 model)
