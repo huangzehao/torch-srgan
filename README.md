@@ -27,7 +27,7 @@ cd torch-srgan
 ```bash
 python make_data.py --train_dir $(train_data_folder) --val_dir $(val_data_folder) --output_file $(output_hdf5_file)
 ```
-- (Optional) Download VGG19 model for percep training
+- (Optional) Download VGG19 model for perceptual training
 ```bash
 cd models
 bash VGG19.sh
