@@ -27,17 +27,20 @@ cd torch-srgan
 ```bash
 python make_data.py --train_dir $(train_data_folder) --val_dir $(val_data_folder) --output_file $(output_hdf5_file)
 ```
-
+- (Optional) Download VGG19 model for percep training
+```bash
+cd models
+bash VGG19.sh
+```
 - Train the model
 ```bash
 # SRResNet MSE
 CUDA_VISIBLE_DEVICES=0 th train.lua -h5_file $(output_hdf5_file) -num_epoch 50 -loss 'pixel'
-# SRResNet MSE VGG22
+# SRResNet MSE VGG22 (need VGG19 model)
 CUDA_VISIBLE_DEVICES=0 th train.lua -h5_file $(output_hdf5_file) -num_epoch 50 -loss 'percep' -percep_layer 'conv2_2' -use_tanh
-# SRResNet MSE VGG54
+# SRResNet MSE VGG54 (need VGG19 model)
 CUDA_VISIBLE_DEVICES=0 th train.lua -h5_file $(output_hdf5_file) -num_epoch 50 -loss 'percep' -percep_layer 'conv5_4' -use_tanh
 ```
-
 - Test trained model
 ```bash
 # SRResNet MSE
