@@ -29,6 +29,7 @@ function main()
 	model = torch.load(opt.model):type(dtype)
 
 	if use_cudnn then cudnn.convert(model, cudnn) end
+	cudnn.benchmark = false
 
 	model:evaluate()
 	local img = gm.Image(opt.img):colorspace('RGB')
