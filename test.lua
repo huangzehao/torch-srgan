@@ -31,7 +31,7 @@ function main()
 	if use_cudnn then cudnn.convert(model, cudnn) end
 	cudnn.benchmark = false
 
-	model:evaluate()
+	model:training()
 	local img = gm.Image(opt.img):colorspace('RGB')
 	local input = img:toTensor('float','RGB','DHW')
 	input = torch.reshape(input,1,input:size(1),input:size(2),input:size(3))
