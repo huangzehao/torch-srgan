@@ -39,7 +39,7 @@ function main()
 		input = input:mul(2.0):add(-1.0)
 	end
 	local output = model:forward(input:type(dtype))
-	local image = gm.Image(output[1]:float():clip(0, 1),'RGB','DHW')
+	local image = gm.Image(output[1]:float():clamp(0, 1),'RGB','DHW')
 	image:save(opt.output)
 end
 
